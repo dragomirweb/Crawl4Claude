@@ -453,4 +453,23 @@ MCP_CONFIG = {
 
 **Happy Documenting! 📚✨**
 
-For questions, issues, or feature requests, please check the debug logs first, then create an issue with relevant details. 
+For questions, issues, or feature requests, please check the debug logs first, then create an issue with relevant details.
+
+---
+
+## 🙏 Attribution
+
+This project is powered by **[Crawl4AI](https://github.com/unclecode/crawl4ai)** - an amazing open-source LLM-friendly web crawler and scraper.
+
+<a href="https://github.com/unclecode/crawl4ai">
+  <img src="https://img.shields.io/badge/Powered%20by-Crawl4AI-blue?style=flat-square" alt="Powered by Crawl4AI"/>
+</a>
+
+Crawl4AI enables the intelligent web scraping capabilities that make this documentation toolkit possible. A huge thanks to [@unclecode](https://github.com/unclecode) and the Crawl4AI community for building such an incredible tool! 🚀
+
+**Check out Crawl4AI:**
+- **Repository**: https://github.com/unclecode/crawl4ai
+- **Documentation**: https://crawl4ai.com
+- **Discord Community**: https://discord.gg/jP8KfhDhyN
+
+## 📄 License 
