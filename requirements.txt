@@ -1,0 +1,25 @@
+# Documentation Scraper Dependencies
+# Install with: pip install -r requirements.txt
+
+# Core scraping framework
+crawl4ai>=0.6.3
+
+# MCP server functionality  
+fastmcp
+
+# Optional: Environment variable loading (for .env files)
+python-dotenv
+
+# Note: The following are built-in Python modules (no installation needed):
+# - sqlite3 (database operations)
+# - asyncio (async programming)
+# - json (JSON handling)
+# - pathlib (path operations)
+# - urllib.parse (URL parsing)
+# - logging (logging functionality)
+# - argparse (CLI argument parsing)
+# - subprocess (process execution)
+# - os, sys (system operations)
+# - re (regular expressions)
+# - time, datetime (time operations)
+

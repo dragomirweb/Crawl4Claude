@@ -1,0 +1,5 @@
+.aider*
+docs_db/
+__pycache__
+mcp/
+*/mcp/
