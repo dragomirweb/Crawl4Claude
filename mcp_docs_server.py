@@ -31,7 +31,7 @@ from typing import Any, Dict, List, Optional
 try:
     from config import MCP_CONFIG, get_mcp_server_config
 except ImportError as e:
-    print("❌ Configuration file 'config.py' is required but not found.")
+    print("[ERROR] Configuration file 'config.py' is required but not found.")
     print("Please ensure config.py exists and contains the required configuration variables.")
     sys.exit(1)
 
@@ -39,7 +39,7 @@ except ImportError as e:
 try:
     from fastmcp import FastMCP
 except ImportError:
-    print("❌ FastMCP not found. Install with: pip install fastmcp")
+    print("[ERROR] FastMCP not found. Install with: pip install fastmcp")
     sys.exit(1)
 
 
@@ -285,9 +285,9 @@ def create_mcp_server() -> FastMCP:
             config  # Pass the full config
         )
     except Exception as e:
-        print(f"❌ Failed to initialize documentation database: {e}")
-        print(f"💡 Check database path: {config['db_path']}")
-        print(f"💡 Run the scraper first: python docs_scraper.py")
+        print(f"[ERROR] Failed to initialize documentation database: {e}")
+        print(f"[TIP] Check database path: {config['db_path']}")
+        print(f"[TIP] Run the scraper first: python docs_scraper.py")
         sys.exit(1)
     
     # Create MCP server
@@ -426,7 +426,7 @@ if __name__ == "__main__":
     try:
         import fastmcp
     except ImportError:
-        print("❌ FastMCP not found. Install with:")
+        print("[ERROR] FastMCP not found. Install with:")
         print("pip install fastmcp")
         sys.exit(1)
     
@@ -435,7 +435,7 @@ if __name__ == "__main__":
         from dotenv import load_dotenv
         if Path(".env").exists():
             load_dotenv()
-            print("✅ Loaded environment overrides from .env file")
+            print("[INFO] Loaded environment overrides from .env file")
     except ImportError:
         # python-dotenv not installed, skip
         pass
@@ -443,13 +443,13 @@ if __name__ == "__main__":
     # Get configuration for display
     config = get_configuration()
     
-    print(f"🚀 Starting MCP Documentation Server")
-    print(f"📊 Database: {config['db_path']}")
-    print(f"📚 Documentation: {config['docs_name']}")
-    print(f"🌐 Base URL: {config['base_url'] or 'Not configured'}")
-    print(f"🔧 Server Name: {config['server_name']}")
-    print(f"⚙️  Config Source: config.py + environment overrides")
-    print(f"🔗 Server ready for MCP connections...")
+    print(f"[MCP] Starting Documentation Server")
+    print(f"[DB] Database: {config['db_path']}")
+    print(f"[DOCS] Documentation: {config['docs_name']}")
+    print(f"[URL] Base URL: {config['base_url'] or 'Not configured'}")
+    print(f"[NAME] Server Name: {config['server_name']}")
+    print(f"[CONFIG] Config Source: config.py + environment overrides")
+    print(f"[STATUS] Server ready for MCP connections...")
     
     # Create and run the MCP server
     mcp = create_mcp_server()
